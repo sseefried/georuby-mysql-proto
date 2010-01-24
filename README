@@ -5,3 +5,23 @@ and render it to the screen using the Raphaël library (http://raphaeljs.com/)
 2. Then look at the file app/views/main/index.html.erb
 
 Be aware that if you use a large SHP file the rendering will be extremely slow.
+
+One thing that may happen when you run shp2sql.rb is that you get a MySQL exception:
+
+   Got a packet bigger than 'max_allowed_packet' bytes
+
+If this happens just log in to mysql client as root and type:
+
+mysql> set global max_allowed_packet=99999744
+
+Or you can edit /etc/my.conf
+
+------
+
+[mysqld]
+
+max_allowed_packet=99999744
+
+
+------
+
