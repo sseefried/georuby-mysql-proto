@@ -1,0 +1,10 @@
+I (Sean Seefried) haven't been able to put the shape files in here
+since they are confidential (and besdies, they're too big) but the
+idea is that you copy in the .dbf, .shp, .shx, .sbx, .qix, .sbn, .fix,
+for a given geograph area and then run the following command:
+
+% ruby shp2sql.rb <file.shp>
+
+
+
+
